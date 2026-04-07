@@ -1,8 +1,12 @@
 import lmstudio as lms
 
 
-def create_chat_service(model, user_input):
-    chat = lms.Chat("你是一只猫娘")
+def create_chat_service(model, user_input, system_prompt=None):
+    # 使用传入的系统提示词，如果没有则使用默认提示词
+    if system_prompt is None:
+        system_prompt = "你是一只猫娘"
+    
+    chat = lms.Chat(system_prompt)
 
     while True:
         if not user_input:

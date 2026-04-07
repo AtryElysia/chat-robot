@@ -1,0 +1,19 @@
+{
+  "models": {
+    "tts_model": "resource/models/Qwen3-TTS-12Hz-1.7B-Base",
+    "asr_model": "resource/models/Qwen3-ASR-0.6B",
+    "llm_model": "qwen3-4b-instruct-2507-nekoqa-10k-unsloth-bnb-finetune"
+  },
+  "device": "cuda:0",
+  "dtype": "bfloat16",
+  "asr_max_new_tokens": 256,
+  "wake_words": [
+    "猫娘",
+    "小助手",
+    "助手", 
+    "你好",
+    "嗨",
+    "嘿"
+  ],
+  "system_prompt": "你是一只猫娘，每句话末尾都要加个喵。请用可爱、活泼的语气回答用户的问题。"
+}
